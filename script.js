@@ -1,45 +1,18 @@
 // Função que atualiza o relógio
 function atualizarRelogio() {
-  const agora = new Date(); // Cria um novo objeto de data com o horário atual
-  const horas = String(agora.getHours()).padStart(2, "0"); // Obtém as horas
-  const minutos = String(agora.getMinutes()).padStart(2, "0"); // Obtém os minutos
-  const segundos = String(agora.getSeconds()).padStart(2, "0"); // Obtém os segundos
+  const agora = new Date();
+  const horas = String(agora.getHours()).padStart(2, "0");
+  const minutos = String(agora.getMinutes()).padStart(2, "0");
+  const segundos = String(agora.getSeconds()).padStart(2, "0");
 
-  // Atualiza o conteúdo do elemento com id "relogio"
   document.getElementById(
     "relogio"
   ).textContent = `${horas}:${minutos}:${segundos}`;
 }
 
-// Atualiza o relógio a cada segundo
-setInterval(atualizarRelogio, 1000);
-
-// Chama a função uma vez para mostrar o relógio imediatamente ao carregar a página
-atualizarRelogio();
-
-
-/*
-// Função que atualiza o relógio
-function atualizarData() {
-  const agora = new Date(); // Cria um novo objeto de data com o horário atual
-
-  const dia  = String(agora.getDate()).padStart(2, "0"); // Obtém as horas
-  const mes = String(agora.getMonth()+ 1).padStart(2, "0"); // Obtém os minutos
-  const ano = agora.getFullYear(); 
-
-  const dataFormatada = `${dia}/${mes}/${ano}`; // Exemplo: "18/07/2025"
-  
-  document.getElementById(
-    "data"
-  ).textContent = `${dia}/${mes}/${ano}`;
-  
-  
-  return dataFormatada;
-}*/
-
+// Função que atualiza a data
 function atualizarData() {
   const agora = new Date();
-
   const diasSemana = [
     "Domingo",
     "Segunda-feira",
@@ -50,7 +23,7 @@ function atualizarData() {
     "Sábado",
   ];
 
-  const diaSemana = diasSemana[agora.getDay()]; // 0 (domingo) a 6 (sábado)
+  const diaSemana = diasSemana[agora.getDay()];
   const dia = String(agora.getDate()).padStart(2, "0");
   const mes = String(agora.getMonth() + 1).padStart(2, "0");
   const ano = agora.getFullYear();
@@ -59,13 +32,12 @@ function atualizarData() {
   document.getElementById("data").textContent = dataFormatada;
 }
 
-// Atualiza data ao carregar
+// Atualiza o relógio e a data a cada segundo
+setInterval(() => {
+  atualizarRelogio();
+  atualizarData();
+}, 1000);
+
+// Chama as funções uma vez para mostrar imediatamente ao carregar a página
+atualizarRelogio();
 atualizarData();
-
-
-
-// Chama a função uma vez para mostrar a data imediatamente ao carregar a página
-atualizarData();
-
-
-

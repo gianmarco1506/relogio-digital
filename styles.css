@@ -1,36 +1,28 @@
 body {
-    display: flex; /* Alinha o conteúdo no centro da tela */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Altura total da tela */
-    background-color: #000000; /* Cor de fundo */
-    color: rgb(255, 0, 0); /* Cor do texto */
-    font-size: 48px; /* Tamanho da fonte */
-    font-family: Arial, sans-serif; /* Fonte utilizada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    color: rgb(255, 0, 0);
+    font-size: 48px;
+    font-family: Arial, sans-serif;
 }
 
 #relogio {
-    border: 2px solid white; /* Borda branca */
-    padding: 20px; /* Espaço interno */
-    border-radius: 10px; /* Cantos arredondados */
-      font-size: 2em;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 20px;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 2em;
+    text-align: center;
+    margin: 20px;
 }
 
-.relogio {
+#data {
     color: red;
-  border: 2px;
 }
 
-#data{
-  color: red;
-
-}
-
-
-     #container {
+#container {
       display: flex;
       flex-direction: column; /* Organiza verticalmente */
       align-items: center;     /* Centraliza na horizontal */
