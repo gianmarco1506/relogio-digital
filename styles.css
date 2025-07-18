@@ -3,8 +3,8 @@ body {
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     height: 100vh; /* Altura total da tela */
-    background-color: #282c34; /* Cor de fundo */
-    color: white; /* Cor do texto */
+    background-color: #000000; /* Cor de fundo */
+    color: rgb(255, 0, 0); /* Cor do texto */
     font-size: 48px; /* Tamanho da fonte */
     font-family: Arial, sans-serif; /* Fonte utilizada */
 }
@@ -13,4 +13,29 @@ body {
     border: 2px solid white; /* Borda branca */
     padding: 20px; /* Espaço interno */
     border-radius: 10px; /* Cantos arredondados */
+      font-size: 2em;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+}
+
+.relogio {
+    color: red;
+  border: 2px;
+}
+
+#data{
+  color: red;
+
+}
+
+
+     #container {
+      display: flex;
+      flex-direction: column; /* Organiza verticalmente */
+      align-items: center;     /* Centraliza na horizontal */
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+      border: 2;
+    
 }
