@@ -1,0 +1,16 @@
+body {
+    display: flex; /* Alinha o conteúdo no centro da tela */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da tela */
+    background-color: #282c34; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-size: 48px; /* Tamanho da fonte */
+    font-family: Arial, sans-serif; /* Fonte utilizada */
+}
+
+#relogio {
+    border: 2px solid white; /* Borda branca */
+    padding: 20px; /* Espaço interno */
+    border-radius: 10px; /* Cantos arredondados */
+}
