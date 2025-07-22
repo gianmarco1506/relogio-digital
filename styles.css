@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -9,11 +9,12 @@ body {
     height: 100vh;
     background-color: #000000;
     color: rgb(255, 0, 0);
-    font-size: 48px;
+    font-size: 4vw; /* Responsivo para telas menores */
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-#relogio {
+.relogio {
     border: 2px solid white;
     padding: 20px;
     border-radius: 10px;
@@ -27,13 +28,46 @@ body {
 }
 
 #container {
-      display: flex;
-      flex-direction: column; /* Organiza verticalmente */
-      align-items: center;     /* Centraliza na horizontal */
-      font-family: Arial, sans-serif;
-      margin-top: 50px;
-      border : 4;
-    
-     
-    
+    display: flex;
+    flex-direction: column; /* Organiza verticalmente */
+    align-items: center;     /* Centraliza na horizontal */
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+/* Media Queries para tornar o layout responsivo */
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 3vw; /* Reduz o tamanho da fonte em telas menores */
+    }
+    .relogio {
+        font-size: 1.5em; /* Ajuste do tamanho do relógio */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 5vw; /* Maior ajuste para telas de tablets */
+    }
+    .relogio {
+        font-size: 1.2em; /* Ajuste do tamanho do relógio */
+        padding: 15px;    /* Menos padding */
+    }
+    #container {
+        margin-top: 30px; /* Menor espaçamento no container */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 6vw; /* Ajusta o texto para telas menores (smartphones) */
+    }
+    .relogio {
+        font-size: 1em; /* Relógio menor */
+        padding: 10px;  /* Menos padding */
+    }
+    #container {
+        margin-top: 20px; /* Menor margem para o container */
+    }
 }
